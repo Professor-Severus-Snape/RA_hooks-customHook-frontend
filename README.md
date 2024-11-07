@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/j9kfu6y02ei42uxl?svg=true)](https://ci.appveyor.com/project/Professor-Severus-Snape/ra-hooks-customhook-frontend)
+
 # Custom Hook (frontend)
 
 Реализуйте кастомный хук `useJsonFetch`, который позволяет с помощью `fetch` осуществлять HTTP-запросы.
