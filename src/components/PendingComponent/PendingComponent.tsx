@@ -1,11 +1,10 @@
-import './pendingComponent.css';
+import useJsonFetch from '../../hooks/useJsonFetch';
+import ContentComponent from '../ContentComponent/ContentComponent';
 
 const PendingComponent = () => {
-  return (
-    <div className="pending">
-      Still loading... Wait a moment! Please, don't go away!
-    </div>
-  );
+  const props = useJsonFetch('/loading');
+
+  return <ContentComponent {...props} title="Component with loading:" />;
 };
 
 export default PendingComponent;

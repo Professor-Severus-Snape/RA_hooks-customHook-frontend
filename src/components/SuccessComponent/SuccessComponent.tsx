@@ -1,17 +1,10 @@
-import './successComponent.css';
+import useJsonFetch from '../../hooks/useJsonFetch';
+import ContentComponent from '../ContentComponent/ContentComponent';
 
-interface ISuccessComponentProps {
-  data: {
-    status?: string;
-  };
-}
+const SuccessComponent = () => {
+  const dataProps = useJsonFetch('/data');
 
-const SuccessComponent = ({ data }: ISuccessComponentProps) => {
-  return (
-    <div className="success">
-      Success! You've got the response: {JSON.stringify(data)}
-    </div>
-  );
+  return <ContentComponent {...dataProps} title="Succeeded Component:" />;
 };
 
 export default SuccessComponent;

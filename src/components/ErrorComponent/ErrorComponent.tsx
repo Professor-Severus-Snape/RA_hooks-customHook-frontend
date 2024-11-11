@@ -1,13 +1,10 @@
-import './errorComponent.css';
+import useJsonFetch from '../../hooks/useJsonFetch';
+import ContentComponent from '../ContentComponent/ContentComponent';
 
-interface IErrorComponentProps {
-  error: Error;
-}
+const ErrorComponent = () => {
+  const dataProps = useJsonFetch('/error');
 
-const ErrorComponent = ({ error }: IErrorComponentProps) => {
-  return (
-    <div className="error">Sorry, you've got the Error: {error.message}</div>
-  );
+  return <ContentComponent {...dataProps} title="Component with error:" />;
 };
 
 export default ErrorComponent;
