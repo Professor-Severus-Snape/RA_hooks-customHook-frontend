@@ -1,13 +1,11 @@
-import ErrorComponent from './components/ErrorComponent/ErrorComponent';
-import PendingComponent from './components/PendingComponent/PendingComponent';
-import SuccessComponent from './components/SuccessComponent/SuccessComponent';
+import Component from './components/Component/Component';
 
 const App = () => {
   return (
     <>
-      {<ErrorComponent />}
-      {<PendingComponent />}
-      {<SuccessComponent />}
+      <Component title="error" path="/error" />
+      <Component title="load" path="/loading" />
+      <Component title="data" path="/data" />
     </>
   );
 };
